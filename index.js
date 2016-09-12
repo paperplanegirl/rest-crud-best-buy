@@ -39,6 +39,7 @@ app.post("/products", function(req, res) {
     id: id,
     name: req.body.name,
     price: req.body.price,
+    quantity: req.body.quantity,
     description: req.body.description
   };
 
@@ -70,6 +71,7 @@ app.put("/products/:id", function(req, res) {
   product.id = req.params.id;
   product.name = req.body.name;
   product.price = req.body.price;
+  product.quantity = req.body.quantity;
   product.description = req.body.description;
 
   editProduct(product);
